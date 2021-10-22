@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AnimalController@index');
+
+// Show individual animals
+
+Route::get('/animals/{id}', 'AnimalController@show');
