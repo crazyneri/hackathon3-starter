@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Owner;
 
 class OwnerController extends Controller
 {
@@ -13,7 +14,8 @@ class OwnerController extends Controller
      */
     public function index()
     {
-        //
+        $owners = Owner::orderBy('surname', 'asc')->get();
+        return view('owners.index', compact('owners'));
     }
 
     /**

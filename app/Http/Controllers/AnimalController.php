@@ -87,4 +87,15 @@ class AnimalController extends Controller
     {
         //
     }
+
+    public function search(Request $request)
+    {
+        // get the request info from the post (input name="search")
+        dd($animal_search);
+        $animal_search = $request->input('search');
+        // take the request info and compare with the DB
+        $animals = Animal::where('name', 'like', '%' . $animal_search . '%')->orWhere('species', 'like', '%' . $animal_search . '%')->orWhere('breed', 'like', '%' . $animal_search . '%');
+        // get the animals that meet the criteria and send them to the same page as index because it will display the search result
+        return view('animals\index', compact('animals'));
+    }
 }

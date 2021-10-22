@@ -15,4 +15,10 @@ class Animal extends Model
         
         return $this->belongsTo('App\Models\Image');
     }
+
+    public function owner()
+    {
+        
+        return $this->belongsTo('App\Models\Owner');
+    }
 }
