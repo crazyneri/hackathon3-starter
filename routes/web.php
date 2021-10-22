@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/animals', 'AnimalController@index');
 Route::get('/animals/{id}', 'AnimalController@show');
 Route::post('/animals', 'AnimalController@search');
-
+Route::get('/animals/{id}/edit', 'AnimalController@edit');
+Route::put('/animals/{id}', 'AnimalController@update');
 
 // Show individual owners
 Route::get('/owners', 'OwnerController@index');

@@ -3,6 +3,7 @@
 
 <h2>The animals page</h2>
 <form action="/animals" method="post">
+@csrf
 <input type="text" name="search"/>
 <input type="submit"/>
 
