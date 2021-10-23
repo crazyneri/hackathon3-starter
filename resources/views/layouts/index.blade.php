@@ -8,7 +8,6 @@
   <title>Main</title>
 </head>
 <body>
-  Yo pet people - we rock!
   @yield('main')
 </body>
 </html>

@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Landing page
+Route::get('/', 'LandingController@index');
 
 // Show individual animals
 

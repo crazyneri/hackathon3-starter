@@ -14,13 +14,13 @@ body {
 }
 
 img {
-    width: 100px;
+    width: 25%;
     height: auto;
     margin: 10px 15px;
 }
 
 img:hover {
-    width: 200px;
+    width: 40%;
     height: auto;
     margin: 10px 15px;
 }
@@ -32,4 +32,32 @@ ul {
 li {
     display: flex;
     flex-flow: column nowrap;
+}
+
+.login {
+    height: 10vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.btn {
+    background-color: #f0a575;
+    padding: 10px;
+    margin: 2% 0;
+    border-radius: 5px;
+}
+
+.input {
+    margin: 10px 0;
+    width: 15%;
+    height: 55%;
+    border-radius: 5px;
+}
+
+.input:focus {
+    border: 2px dotted #555;
+}
+
+.label-login {
+    padding: 10px;
 }
